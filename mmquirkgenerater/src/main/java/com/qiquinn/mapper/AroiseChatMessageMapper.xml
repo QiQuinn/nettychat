@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiquinn.dao.AroiseChatMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.qiquinn.pojo.AroiseChatMessage" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="message_sender_user_id" property="messageSenderUserId" jdbcType="INTEGER" />
+    <result column="message_accept_user_id" property="messageAcceptUserId" jdbcType="INTEGER" />
+    <result column="message" property="message" jdbcType="VARCHAR" />
+    <result column="message_sgin_flag" property="messageSginFlag" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

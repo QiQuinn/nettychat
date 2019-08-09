@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiquinn.dao.AroiseChatUserMapper" >
+  <resultMap id="userResult" type="com.qiquinn.model.AroiseChatUser" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_password" property="userPassword" jdbcType="VARCHAR" />
+    <result column="user_nikename" property="userNikename" jdbcType="VARCHAR" />
+    <result column="user_age" property="userAge" jdbcType="INTEGER" />
+    <result column="user_gender" property="userGender" jdbcType="INTEGER" />
+    <result column="user_individual" property="userIndividual" jdbcType="VARCHAR" />
+    <result column="user_qrcode" property="userQrcode" jdbcType="VARCHAR" />
+    <result column="user_cid" property="userCid" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="select" resultMap="userResult" parameterType="com.qiquinn.model.AroiseChatUser">
+    SELECT * FROM `aroise_chat_user`;
+  </select>
+  <select id="selectById" resultMap="userResult" parameterType="int">
+    SELECT * FROM `aroise_chat_user` WHERE id = #{id}
+  </select>
+  <delete id="deleteById" parameterType="int">
+    DELETE * FROM `aroise_chat_user` WHERE id = #{id}
+  </delete>
+  <update id="updateByPrimaryKey" parameterType="com.qiquinn.model.AroiseChatUser">
+    UPDATE
+  </update>
+</mapper>

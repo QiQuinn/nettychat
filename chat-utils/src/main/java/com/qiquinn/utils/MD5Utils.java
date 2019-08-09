@@ -1,10 +1,8 @@
 package com.qiquinn.utils;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.digest.Md5Crypt;
 
 public class MD5Utils {
 

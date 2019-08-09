@@ -27,6 +27,17 @@
             <artifactId>chat-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.qiquinn</groupId>
+            <artifactId>chat-utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.qiquinn</groupId>
+                    <artifactId>chat-model</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,7 +1,7 @@
 package com.qiquinn.dao;
 
-import com.qiquinn.dao.base.MyMapper;
-import com.qiquinn.pojo.AroiseChatMessageRequest;
+import com.qiquinn.dao.base.BaseMapper;
+import com.qiquinn.model.AroiseChatMessageRequest;
 
-public interface AroiseChatMessageRequestMapper extends MyMapper<AroiseChatMessageRequest> {
+public interface AroiseChatMessageRequestMapper extends BaseMapper<AroiseChatMessageRequest> {
 }

@@ -1,5 +1,6 @@
 package com.qiquinn;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
  *
  */
 @EnableAutoConfiguration
-@ComponentScan("com.qiquinn")
+@ComponentScan(basePackages = {"com.qiquinn","com.qiquinn.utils.idworker"})
+@MapperScan("com.qiquinn.dao")
 public class NettyWebSocketServerStartor
 {
     public static void main( String[] args )

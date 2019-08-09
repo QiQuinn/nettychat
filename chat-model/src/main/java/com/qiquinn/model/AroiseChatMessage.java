@@ -7,137 +7,62 @@ import javax.persistence.Table;
 public class AroiseChatMessage {
     @Id
     private Integer id;
-
     /**
      * 发送者
-     */
-    @Column(name = "message_sender_user_id")
-    private Integer messageSenderUserId;
-
+     * */
+    private Integer messageSenderId;
     /**
      * 接收者
-     */
-    @Column(name = "message_accept_user_id")
-    private Integer messageAcceptUserId;
-
+     * */
+    private Integer messageAccepterId;
     /**
      * 消息
-     */
+     * */
     private String message;
-
     /**
      * 消息一读状态
-     */
-    @Column(name = "message_sgin_flag")
-    private Integer messageSginFlag;
-
+     * */
+    private String messageSginFlag;
     /**
      * 创建时间
-     */
-    @Column(name = "create_time")
+     * */
     private String createTime;
 
-    /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
+    public AroiseChatMessage(){}
     public void setId(Integer id) {
         this.id = id;
     }
-
-    /**
-     * 获取发送者
-     *
-     * @return message_sender_user_id - 发送者
-     */
-    public Integer getMessageSenderUserId() {
-        return messageSenderUserId;
+    public Integer getId() {
+        return id;
     }
-
-    /**
-     * 设置发送者
-     *
-     * @param messageSenderUserId 发送者
-     */
-    public void setMessageSenderUserId(Integer messageSenderUserId) {
-        this.messageSenderUserId = messageSenderUserId;
+    public void setMessageSenderId(Integer messageSenderId) {
+        this.messageSenderId = messageSenderId;
     }
-
-    /**
-     * 获取接收者
-     *
-     * @return message_accept_user_id - 接收者
-     */
-    public Integer getMessageAcceptUserId() {
-        return messageAcceptUserId;
+    public Integer getMessageSenderId() {
+        return messageSenderId;
     }
-
-    /**
-     * 设置接收者
-     *
-     * @param messageAcceptUserId 接收者
-     */
-    public void setMessageAcceptUserId(Integer messageAcceptUserId) {
-        this.messageAcceptUserId = messageAcceptUserId;
+    public void setMessageAccepterId(Integer messageAccepterId) {
+        this.messageAccepterId = messageAccepterId;
     }
-
-    /**
-     * 获取消息
-     *
-     * @return message - 消息
-     */
-    public String getMessage() {
-        return message;
+    public Integer getMessageAccepterId() {
+        return messageAccepterId;
     }
-
-    /**
-     * 设置消息
-     *
-     * @param message 消息
-     */
     public void setMessage(String message) {
         this.message = message;
     }
-
-    /**
-     * 获取消息一读状态
-     *
-     * @return message_sgin_flag - 消息一读状态
-     */
-    public Integer getMessageSginFlag() {
-        return messageSginFlag;
+    public String getMessage() {
+        return message;
     }
-
-    /**
-     * 设置消息一读状态
-     *
-     * @param messageSginFlag 消息一读状态
-     */
-    public void setMessageSginFlag(Integer messageSginFlag) {
+    public void setMessageSginFlag(String messageSginFlag) {
         this.messageSginFlag = messageSginFlag;
     }
-
-    /**
-     * 获取创建时间
-     *
-     * @return create_time - 创建时间
-     */
-    public String getCreateTime() {
-        return createTime;
+    public String getMessageSginFlag() {
+        return messageSginFlag;
     }
-
-    /**
-     * 设置创建时间
-     *
-     * @param createTime 创建时间
-     */
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
+    }
+    public String getCreateTime() {
+        return createTime;
     }
 }

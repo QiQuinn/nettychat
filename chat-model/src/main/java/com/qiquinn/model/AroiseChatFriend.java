@@ -1,6 +1,5 @@
 package com.qiquinn.model;
 
-import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,52 +7,35 @@ import javax.persistence.Table;
 public class AroiseChatFriend {
     @Id
     private Integer id;
-
-    @Column(name = "user_id")
-    private String userId;
-
-    @Column(name = "friend_id")
-    private String friendId;
-
     /**
-     * @return id
-     */
-    public Integer getId() {
-        return id;
-    }
-
+     * 添加者ID
+     * */
+    private Integer chatSendUserId;
     /**
-     * @param id
-     */
+     * 朋友ID
+     * */
+    private Integer chatAcceptUserId;
+    /**
+     * 昵称
+     * */
+    private String chatRequestTime;
+    public AroiseChatFriend(){}
     public void setId(Integer id) {
         this.id = id;
     }
-
-    /**
-     * @return user_id
-     */
-    public String getUserId() {
-        return userId;
+    public Integer getId() {
+        return id;
     }
-
-    /**
-     * @param userId
-     */
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setChatSendUserId(Integer chatSendUserId) {
+        this.chatSendUserId = chatSendUserId;
     }
-
-    /**
-     * @return friend_id
-     */
-    public String getFriendId() {
-        return friendId;
+    public Integer getChatSendUserId() {
+        return chatSendUserId;
     }
-
-    /**
-     * @param friendId
-     */
-    public void setFriendId(String friendId) {
-        this.friendId = friendId;
+    public void setChatAcceptUserId(Integer chatAcceptUserId) {
+        this.chatAcceptUserId = chatAcceptUserId;
+    }
+    public Integer getChatAcceptUserId() {
+        return chatAcceptUserId;
     }
 }

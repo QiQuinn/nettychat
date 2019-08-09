@@ -1,7 +1,9 @@
 package com.qiquinn.dao;
 
-import com.qiquinn.dao.base.MyMapper;
-import com.qiquinn.pojo.AroiseChatUser;
+import com.qiquinn.dao.base.BaseMapper;
+import com.qiquinn.model.AroiseChatUser;
 
-public interface AroiseChatUserMapper extends MyMapper<AroiseChatUser> {
+public interface AroiseChatUserMapper extends BaseMapper<AroiseChatUser>
+{
+    AroiseChatUser findUserByName(String userName);
 }
